@@ -12,46 +12,49 @@
 
         <LinearLayout
             android:id="@+id/feature_add_confirm_buttons"
-            android:layout_alignParentBottom="true"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:padding="8dp"
             android:orientation="vertical">
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
+                    android:orientation="vertical"
+                    tools:ignore="UselessParent">
                         <GridView
                             android:id="@+id/gridView2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="635dp"
-                            android:numColumns="2" />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="24dp"
-                    android:layout_marginVertical="16dp"
-                    android:layout_gravity="center"
-                    tools:ignore="UnusedAttribute">
-                        <Button
-                            android:id="@+id/feature_add_cancel_btn"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/txt_next_from_btn"
-                            android:textColor="@android:color/white"
-                            android:textStyle="bold"
-                            android:padding="8dp"
-                            android:textSize="16sp"
-                            android:textAllCaps="false"
-                            android:background="@drawable/shape_btn_green"
-                            android:layout_below="@+id/gridView2"
-                            tools:ignore="ObsoleteLayoutParam"/>
-                            <!--Todas las medidas segun la doc. de google
-                            deben de ir en multiplos de 8 para mejor adaptacion con los dispositivos
-                            todo tipo de texto se coloca con "SP" las medidad de "DP" son para margenes
-                             trata de no dejar warnins en tus proyectos :D!-->
+                            android:layout_height="4150dp"
+                            android:numColumns="2" />
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginHorizontal="24dp"
+                                    android:layout_marginVertical="16dp"
+                                    android:layout_gravity="center"
+                                    android:layout_below="@+id/feature_add_confirm_buttons"
+                                    tools:ignore="ObsoleteLayoutParam"
+                                    tools:targetApi="o">
+                                        <Button
+                                            android:id="@+id/feature_add_cancel_btn"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="@string/txt_next_from_btn"
+                                            android:textColor="@android:color/white"
+                                            android:textStyle="bold"
+                                            android:padding="8dp"
+                                            android:textSize="16sp"
+                                            android:textAllCaps="false"
+                                            android:background="@drawable/shape_btn_green" />
+                                        <!--Todas las medidas segun la doc. de google
+                                        deben de ir en multiplos de 8 para mejor adaptacion con los dispositivos
+                                        todo tipo de texto se coloca con "SP" las medidad de "DP" son para margenes
+                                         trata de no dejar warnins en tus proyectos :D!-->
+                                </LinearLayout>
                 </LinearLayout>
+                </ScrollView>
         </LinearLayout>
 </RelativeLayout>
